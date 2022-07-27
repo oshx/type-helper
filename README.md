@@ -29,6 +29,17 @@ That's why it is here.
 $ npm i -D @types/oshx-type-helper
 ```
 
+Please add below in `tsconfig.json` file.
+```json
+{
+  "compilerOptions": {
+    "typeRoots": [
+      "node_modules/@oshx/type-helper"
+    ]
+  }
+}
+```
+
 ## How to use
 The case below is pretended in your TypeScript project.
 ```typescript

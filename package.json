@@ -1,5 +1,5 @@
 {
-  "name": "@types/oshx-type-helper",
+  "name": "@oshx/type-helper",
   "version": "0.0.1",
   "description": "Types help TypeScript types.",
   "scripts": {
