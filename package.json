@@ -1,0 +1,29 @@
+{
+  "name": "type-helper",
+  "version": "0.0.1",
+  "description": "Types help TypeScript types.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oshx/type-helper.git"
+  },
+  "keywords": [
+    "TypeScript",
+    "type"
+  ],
+  "author": {
+    "name": "오승환",
+    "email": "oshxios@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oshx/type-helper/issues"
+  },
+  "homepage": "https://github.com/oshx/type-helper#readme",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}
