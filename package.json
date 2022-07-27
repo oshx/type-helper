@@ -1,8 +1,7 @@
 {
-  "name": "type-helper",
+  "name": "@types/oshx-type-helper",
   "version": "0.0.1",
   "description": "Types help TypeScript types.",
-  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,9 +13,12 @@
     "TypeScript",
     "type"
   ],
+  "types": "./@types/index.d.ts",
   "author": {
     "name": "오승환",
-    "email": "oshxios@gmail.com"
+    "email": "oshxios@gmail.com",
+    "githubUserName": "oshx",
+    "url": "https://github.com/oshx"
   },
   "license": "MIT",
   "bugs": {
@@ -24,6 +26,8 @@
   },
   "homepage": "https://github.com/oshx/type-helper#readme",
   "devDependencies": {
+    "prettier": "^2.7.1",
     "typescript": "^4.7.4"
-  }
+  },
+  "type": "module"
 }
