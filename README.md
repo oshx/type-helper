@@ -1,4 +1,4 @@
-# @types/oshx-type-helper
+# @oshx/type-helper
 This is the type helper for TypeScript users.
 When you want to use the 'Enum' type in the TypeScript file, you could get a doubt that this built result is efficient.
 ```typescript
@@ -26,7 +26,7 @@ That's why it is here.
 
 ## Installation
 ```shell
-$ npm i -D @types/oshx-type-helper
+$ npm i -D @oshx/type-helper
 ```
 
 Please add below in `tsconfig.json` file.
