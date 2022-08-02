@@ -1,28 +1,5 @@
 # @oshx/type-helper
-This is the type helper for TypeScript users.
-When you want to use the 'Enum' type in the TypeScript file, you could get a doubt that this built result is efficient.
-```typescript
-enum EnumA {
-  ENUM_1,
-  ENUM_2,
-}
-
-function inputA(value: EnumA): EnumA {...}
-```
-
-As you might know, the 'Enum' of TypeScript could be caused below.
-```javascript
-"use strict";
-
-var EnumA;
-(function (EnumA) {
-  EnumA[EnumA["ENUM_1"] = 0] = "ENUM_1";
-  EnumA[EnumA["ENUM_2"] = 1] = "ENUM_2";
-})(EnumA || (EnumA = {}));
-```
-
-You don't expect it, right?
-That's why it is here.
+This package includes the practical type helper for TypeScript users.
 
 ## Installation
 ```shell
@@ -39,6 +16,53 @@ Please add below in `tsconfig.json` file.
   }
 }
 ```
+
+## Ingredients
+
+```typescript
+type ObjectKey
+    // explicit constant object keys
+
+type ObjectValue
+    // explicit constant object values
+
+interface PropsWithClassName
+    // extendable interface with property 'className'
+```
+
+## Why it comes for?
+
+`type ObjectKey`
+
+`type ObjectValue`
+
+When you want to use the 'Enum' type in the TypeScript file, you could get a doubt that this built result is efficient.
+```typescript
+enum EnumA {
+  ENUM_1,
+  ENUM_2,
+}
+
+function inputA(value: EnumA): EnumA {
+    return 'ENUM_1' || 0 // EnumA Key or Value types are allowed!
+}
+```
+
+As you might know, the 'Enum' of TypeScript could be caused below.
+```javascript
+"use strict";
+
+var EnumA;
+(function (EnumA) {
+  EnumA[EnumA["ENUM_1"] = 0] = "ENUM_1";
+  EnumA[EnumA["ENUM_2"] = 1] = "ENUM_2";
+})(EnumA || (EnumA = {}));
+```
+
+A key type and a value type are on the same level as the type.
+
+You don't expect it, right?
+That's why it is here.
 
 ## How to use
 The case below is pretended in your TypeScript project.
@@ -60,4 +84,48 @@ const keyOfA: ObjectAKey = 'KEY_A';
 const valueOfA: ObjectAValue = 'valueA';
 ```
 
+You can distinguish the key and the value as types.
+
+And below example is for the 'React' users with CSS-in-JS styling.
+
+```typescript jsx
+// expected a style extendable element!
+import { ReactComponentElement, ReactElement, PropsWithClassName } from 'react';
+
+// assign a component to const
+interface ConstantFunctionComponentProps extends PropsWithClassName, PropsWithChidren {
+  title: string;
+}
+
+const ConstantFunctionComponent: ReactComponentElement<
+  ConstantFunctionComponentProps
+> = ({ title, children, className }) => {
+  return (<div className={className}>{title} {children}</div>);
+}
+
+// declare a function component
+interface FunctionStyleComponentProps {
+  title: string;
+}
+function FunctionStyleComponent({
+  title,
+  children,
+  className,
+}: PropsWithClassName<
+  PropsWithChildren<FunctionStyleComponentProps>
+>): ReactElement {
+  return <div className={className}>{title} {children}</div>;
+}
+```
+
+It should be useful when you make a component with '[Styled Components](https://styled-components.com/)' | '[Emotion Styled](https://emotion.sh/docs/styled)'
+
+
 So easy to use, huh?
+
+## Appendix
+### Q&A
+
+`Q` I'm so scared! Why it's major version start with 0!?
+
+`A` I have no idea! But it should be STABLE version soon.
