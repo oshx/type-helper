@@ -32,8 +32,7 @@ interface PropsWithClassName
 
 ## Why it comes for?
 
-`type ObjectKey`
-
+`type ObjectKey`, 
 `type ObjectValue`
 
 When you want to use the 'Enum' type in the TypeScript file, you could get a doubt that this built result is efficient.
