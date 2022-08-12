@@ -28,9 +28,15 @@ type ObjectValue
 
 interface PropsWithClassName
     // extendable interface with property 'className'
+
+type AnyFunction
+    // simply declared any function
 ```
 
 ## Why it comes for?
+
+The inspiration of this package is built for practical uses when often occurred.
+The first members of this package are below.
 
 `type ObjectKey`, 
 `type ObjectValue`
@@ -89,7 +95,7 @@ And below example is for the 'React' users with CSS-in-JS styling.
 
 ```typescript jsx
 // expected a style extendable element!
-import { ReactComponentElement, ReactElement, PropsWithClassName } from 'react';
+import { ReactComponentElement, ReactElement } from 'react';
 
 // assign a component to const
 interface ConstantFunctionComponentProps extends PropsWithClassName, PropsWithChidren {
@@ -119,12 +125,19 @@ function FunctionStyleComponent({
 
 It should be useful when you make a component with '[Styled Components](https://styled-components.com/)' | '[Emotion Styled](https://emotion.sh/docs/styled)'
 
+The package includes example `JS-Doc`.
+
+This package will promise to you below.
+
+1. This package will not pollute your dependencies.
+2. This package will not update with other dependencies.
+3. This package will not remove the made types until the next major version.
 
 So easy to use, huh?
 
 ## Appendix
 ### Q&A
 
-`Q` I'm so scared! Why it's major version start with 0!?
+`Q` What is this garbage?
 
-`A` I have no idea! But it should be STABLE version soon.
+`A` Oops! Go your way, please don't use it.
