@@ -26,8 +26,8 @@ type ObjectKey
 type ObjectValue
     // explicit constant object values
 
-interface PropsWithClassName
-    // extendable interface with property 'className'
+type PropsWithClassName
+    // extendable interface-like-type with property 'className'
 
 type AnyFunction
     // simply declared any function
