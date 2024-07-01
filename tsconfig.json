@@ -6,7 +6,6 @@
       "es2021.intl"
     ],
     "jsx": "preserve",
-    "noLib": true,
     "module": "commonjs",
     "rootDir": "./",
     "moduleResolution": "node",
