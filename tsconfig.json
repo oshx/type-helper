@@ -1,12 +1,10 @@
 {
   "compilerOptions": {
-    /* Visit https://aka.ms/tsconfig to read more about this file */
     "target": "es5",
     "lib": [
       "es2021.intl"
     ],
     "jsx": "preserve",
-    "noLib": true,
     "module": "commonjs",
     "rootDir": "./",
     "moduleResolution": "node",
@@ -27,8 +25,7 @@
     "skipLibCheck": true
   },
   "include": [
-    "types/**/*.ts",
-    "types/**/*.d.ts"
+    "./**/*"
   ],
   "exclude": [
     "node_modules"

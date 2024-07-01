@@ -8,6 +8,7 @@
  *
  * type ObjectKey<ObjectA> = 'KEY_A'|'KEY_B';
  */
+
 declare type ObjectKey<T extends object = any> = keyof T
 
 /** Expected to a type of value of an object. Cast `as const` object is usually supported autocomplete in some IDEs.
@@ -20,7 +21,7 @@ declare type ObjectKey<T extends object = any> = keyof T
  *
  * type ObjectValue<ObjectA> = 'valueA'|'valueB';
  */
-declare type ObjectValue<T extends object = any> = T[ObjectKey]
+declare type ObjectValue<T extends object = any> = T[ObjectKey<T>]
 
 /** The extendable interface for CSS-in-JS users.
  *
@@ -29,12 +30,12 @@ declare type ObjectValue<T extends object = any> = T[ObjectKey]
  *   ...
  * }
  */
-declare interface PropsWithClassName<
+declare type PropsWithClassName<
   T extends object = object,
-  ClassNameType extends string = string | undefined
-> extends T {
+  ClassNameType = string | undefined
+> = {
   className: ClassNameType
-}
+} & T;
 
 /** The simple `Any function` declaration.
  *

@@ -1,6 +1,6 @@
 {
   "name": "@oshx/type-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Types help TypeScript types.",
   "repository": {
     "type": "git",
@@ -23,11 +23,11 @@
   },
   "homepage": "https://github.com/oshx/type-helper#readme",
   "devDependencies": {
-    "prettier": "^2.7.1",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "prettier": "^2.7.1"
   },
   "peerDependencies": {
-    "typescript": "^4.7.4"
+    "typescript": ">=4.7.4"
   },
   "type": "module"
 }
