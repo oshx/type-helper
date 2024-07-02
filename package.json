@@ -1,6 +1,6 @@
 {
   "name": "@oshx/type-helper",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Types help TypeScript types.",
   "repository": {
     "type": "git",
@@ -10,12 +10,19 @@
     "TypeScript",
     "type"
   ],
-  "types": "./@types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": {
+        "default": "./types.d.ts"
+      }
+    }
+  },
+  "typeRoots": "./types.d.ts",
+  "types": "./types.d.ts",
   "author": {
     "name": "오승환",
     "email": "oshxios@gmail.com",
-    "githubUserName": "oshx",
-    "url": "https://github.com/oshx"
+    "githubUserName": "oshx"
   },
   "license": "MIT",
   "bugs": {
@@ -25,9 +32,5 @@
   "devDependencies": {
     "typescript": "^4.7.4",
     "prettier": "^2.7.1"
-  },
-  "peerDependencies": {
-    "typescript": ">=4.7.4"
-  },
-  "type": "module"
+  }
 }

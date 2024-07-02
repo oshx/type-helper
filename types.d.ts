@@ -30,12 +30,12 @@ declare type ObjectValue<T extends object = any> = T[ObjectKey<T>]
  *   ...
  * }
  */
-declare type PropsWithClassName<
+declare interface PropsWithClassName<
   T extends object = object,
   ClassNameType = string | undefined
-> = {
+> extends T {
   className: ClassNameType
-} & T;
+}
 
 /** The simple `Any function` declaration.
  *
