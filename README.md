@@ -1,4 +1,6 @@
 # @oshx/type-helper
+[![Node.js Package](https://github.com/oshx/type-helper/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/oshx/type-helper/actions/workflows/npm-publish.yml)
+
 This package includes the practical type helper for TypeScript users.
 
 ## Installation
@@ -26,8 +28,8 @@ type ObjectKey
 type ObjectValue
     // explicit constant object values
 
-interface PropsWithClassName
-    // extendable interface with optional property 'className'
+type PropsWithClassName
+    // extendable interface-like-type with optional property 'className'
 
 type AnyFunction
     // simply declared any function
