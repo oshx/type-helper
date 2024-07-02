@@ -23,19 +23,19 @@ declare type ObjectKey<T extends object = any> = keyof T
  */
 declare type ObjectValue<T extends object = any> = T[ObjectKey<T>]
 
-/** The extendable interface for CSS-in-JS users.
+/** The extendable interface-like-type for CSS-in-JS users.
  *
  * @example
  * interface ReactComponentProps extends PropsWithChildren, PropsWithClassName {
  *   ...
  * }
  */
-declare interface PropsWithClassName<
+declare type PropsWithClassName<
   T extends object = object,
   ClassNameType = string | undefined
-> extends T {
+> = {
   className: ClassNameType
-}
+} & T
 
 /** The simple `Any function` declaration.
  *
