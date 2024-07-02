@@ -1,6 +1,6 @@
 {
   "name": "@oshx/type-helper",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Types help TypeScript types.",
   "repository": {
     "type": "git",
@@ -13,12 +13,12 @@
   "exports": {
     ".": {
       "types": {
-        "default": "./types.d.ts"
+        "default": "./index.d.ts"
       }
     }
   },
-  "typeRoots": "./types.d.ts",
-  "types": "./types.d.ts",
+  "typeRoots": "./index.d.ts",
+  "types": "./index.d.ts",
   "author": {
     "name": "오승환",
     "email": "oshxios@gmail.com",
