@@ -6,7 +6,6 @@
     "rootDir": "./",
     "moduleResolution": "node",
     "baseUrl": "./",
-    "paths": {},
     "allowJs": true,
     "checkJs": true,
     "declaration": true,
