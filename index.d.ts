@@ -6,7 +6,7 @@
  *   KEY_B: 'valueB',
  * } as const;
  *
- * type ObjectKey<ObjectA> = 'KEY_A'|'KEY_B';
+ * type ObjectKey<typeof ObjectA> = 'KEY_A'|'KEY_B';
  */
 
 declare type ObjectKey<T extends object = any> = keyof T
@@ -19,7 +19,7 @@ declare type ObjectKey<T extends object = any> = keyof T
  *   KEY_B: 'valueB',
  * } as const;
  *
- * type ObjectValue<ObjectA> = 'valueA'|'valueB';
+ * type ObjectValue<typeof ObjectA> = 'valueA'|'valueB';
  */
 declare type ObjectValue<T extends object = any> = T[ObjectKey<T>]
 

@@ -23,16 +23,22 @@ Please add below in `tsconfig.json` file.
 
 ```typescript
 type ObjectKey
-    // explicit constant object keys
+  // explicit constant object keys
+```
 
+```typescript
 type ObjectValue
-    // explicit constant object values
+  // explicit constant object values
+```
 
+```typescript
 type PropsWithClassName
-    // extendable interface-like-type with optional property 'className'
+  // extendable interface-like-type with optional property 'className'
+```
 
+```typescript
 type AnyFunction
-    // simply declared any function
+  // simply declared any function
 ```
 
 ## Why it comes for?
@@ -78,6 +84,7 @@ export const ObjectA = {
   KEY_A: 'valueA',
   KEY_B: 'valueB',
 } as const;
+// Same effects with Enum type!
 
 export type ObjectAKey = ObjectKey<typeof ObjectA>;
 export type ObjectAValue = ObjectValue<typeof ObjectA>;
@@ -86,7 +93,7 @@ export type ObjectAValue = ObjectValue<typeof ObjectA>;
 const shouldBeKeyOfA: ObjectAKey = 'KeyA';
 const shouldBeValueOfA: ObjectAValue = 'ValueA';
 
-// Passed!
+// Passed ✔️
 const keyOfA: ObjectAKey = 'KEY_A';
 const valueOfA: ObjectAValue = 'valueA';
 ```
