@@ -13,6 +13,17 @@ Please add below in `tsconfig.json` file.
 {
   "compilerOptions": {
     "typeRoots": [
+      "node_modules/@oshx"
+    ]
+  }
+}
+```
+
+If your TypeScript doesn't accept that type, then add below.
+```json
+{
+  "compilerOptions": {
+    "typeRoots": [
       "node_modules/@oshx/type-helper"
     ]
   }
