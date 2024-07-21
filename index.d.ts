@@ -32,9 +32,9 @@ declare type ObjectValue<T extends object = any> = T[ObjectKey<T>]
  */
 declare type PropsWithClassName<
   T extends object = object,
-  ClassNameType = string | undefined
+  ClassNameType = string
 > = {
-  className: ClassNameType
+  className?: ClassNameType
 } & T
 
 /** The simple `Any function` declaration.
