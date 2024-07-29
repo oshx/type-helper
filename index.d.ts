@@ -45,3 +45,57 @@ declare type PropsWithClassName<
  * }
  */
 declare type AnyFunction = (...args: any[]) => any
+
+/** Image File Format GIF
+ *
+ * @example
+ * import example from '~/statics/example.gif';
+ */
+declare module '*.gif' {
+  export default string
+}
+
+/** Image File Format JPG
+ *
+ * @example
+ * import example from '~/statics/example.jpg';
+ */
+declare module '*.jpg' {
+  export default string
+}
+
+/** Image File Format JPEG
+ *
+ * @example
+ * import example from '~/statics/example.jpeg';
+ */
+declare module '*.jpeg' {
+  export default string
+}
+
+/** Image File Format PNG
+ *
+ * @example
+ * import example from '~/statics/example.png';
+ */
+declare module '*.png' {
+  export default string
+}
+
+/** Image File Format BMP
+ *
+ * @example
+ * import example from '~/statics/example.bmp';
+ */
+declare module '*.bmp' {
+  export default string
+}
+
+/** Image File Format WEBP
+ *
+ * @example
+ * import example from '~/statics/example.webp';
+ */
+declare module '*.webp' {
+  export default string
+}

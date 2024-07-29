@@ -52,6 +52,10 @@ type AnyFunction
   // simply declared any function
 ```
 
+```typescript
+// images like GIF, JPG, JPEG, PNG, BMP, WEBP as string module
+```
+
 ## Why it comes for?
 
 The inspiration of this package is built for practical uses when often occurred.
@@ -144,6 +148,20 @@ function FunctionStyleComponent({
 ```
 
 It should be useful when you make a component with '[Styled Components](https://styled-components.com/)' | '[Emotion Styled](https://emotion.sh/docs/styled)'
+
+And also you can use your image components like below with '[React](https://react.dev/)'!
+
+```typescript jsx
+// import with no errors!
+import sampleImage from '~/statics/sample-image.gif';
+
+// just use that image!
+function SomeImageElement(): ReactElement {
+  return <img src={sampleImage} />;
+}
+
+export default SomeImageElement;
+```
 
 The package includes example `JS-Doc`.
 
