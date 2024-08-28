@@ -13,7 +13,8 @@ Please add below in `tsconfig.json` file.
 {
   "compilerOptions": {
     "typeRoots": [
-      "node_modules/@oshx"
+      "node_modules/@oshx",
+      "node_modules/@types"
     ]
   }
 }
@@ -24,7 +25,8 @@ If your TypeScript doesn't accept that type, then add below.
 {
   "compilerOptions": {
     "typeRoots": [
-      "node_modules/@oshx/type-helper"
+      "node_modules/@oshx/type-helper",
+      "node_modules/@types"
     ]
   }
 }
@@ -53,7 +55,7 @@ type AnyFunction
 ```
 
 ```typescript
-// images like GIF, JPG, JPEG, PNG, BMP, WEBP as string module
+// images like GIF, JPG, JPEG, PNG, BMP, WEBP and SVG as string module
 ```
 
 ## Why it comes for?
