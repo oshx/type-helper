@@ -99,3 +99,12 @@ declare module '*.bmp' {
 declare module '*.webp' {
   export default string
 }
+
+/** Image File Format SVG
+ *
+ * @example
+ * import example from '~/statics/example.svg';
+ */
+declare module '*.svg' {
+  export default string
+}
