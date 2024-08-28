@@ -1,6 +1,6 @@
 {
   "name": "@oshx/type-helper",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Types help TypeScript types.",
   "repository": {
     "type": "git",
