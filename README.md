@@ -58,6 +58,11 @@ type AnyFunction
 // images like GIF, JPG, JPEG, PNG, BMP, WEBP and SVG as string module
 ```
 
+```typescript
+type ArrayElement<T>
+  // array element type
+```
+
 ## Why it comes for?
 
 The inspiration of this package is built for practical uses when often occurred.
@@ -163,6 +168,18 @@ function SomeImageElement(): ReactElement {
 }
 
 export default SomeImageElement;
+```
+
+When you need to use array element as a type, you can use `ArrayElement` type.
+
+```typescript
+// some special tuple array
+type SpecialArrayType = [number, 'element-name'|'another-element-name', { keyName: string }];
+
+const specialArray: SpecialArrayType = [1, 'element-name', { keyName: 'some-key-value' }];
+
+// It works as expected!
+const lastElement: ArrayElement<SpecialArrayType> = { keyName: '' };
 ```
 
 The package includes example `JS-Doc`.
