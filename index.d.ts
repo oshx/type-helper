@@ -108,3 +108,15 @@ declare module '*.webp' {
 declare module '*.svg' {
   export default string
 }
+
+/**
+ * Array Element Type
+ * @reference https://stackoverflow.com/questions/41253310/typescript-retrieve-element-type-information-from-array-type
+ * @description It is inferred from an array type to its element type
+ * @example
+ * const someArray = [1, 'number', true, { key: 'value }] as const;
+ * type SomeArrayElement = ArrayElement<typeof someArray>;
+ * // SomeArrayElement will be `1 | "number" | true | { key: string }`
+ */
+type ArrayElement<ArrayType extends readonly unknown[]> =
+  ArrayType extends readonly (infer ElementType)[] ? ElementType : never;
