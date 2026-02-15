@@ -8,19 +8,13 @@ This package includes the practical type helper for TypeScript users.
 $ npm i -D @oshx/type-helper
 ```
 
-Please add below in `tsconfig.json` file.
-```json
-{
-  "compilerOptions": {
-    "typeRoots": [
-      "node_modules/@oshx",
-      "node_modules/@types"
-    ]
-  }
-}
-```
+If you're using *TypeScript 4.7+*, no setup needed.
 
-If your TypeScript doesn't accept that type, then add below.
+### Older version *< TypeScript 4.7*
+However, if you're using an older version of TypeScript, you may need to configure the following.
+
+`tsconfig.json`
+
 ```json
 {
   "compilerOptions": {
@@ -65,13 +59,13 @@ type ArrayElement<T>
 
 ## Why it comes for?
 
-The inspiration of this package is built for practical uses when often occurred.
+The inspiration of this package is created for practical use cases that occur frequently.
 The first members of this package are below.
 
 `type ObjectKey`, 
 `type ObjectValue`
 
-When you want to use the 'Enum' type in the TypeScript file, you could get a doubt that this built result is efficient.
+When you want to use the 'Enum' type in the TypeScript file, you might doubt whether this compiled result is efficient.
 ```typescript
 enum EnumA {
   ENUM_1,
@@ -83,7 +77,7 @@ function inputA(value: EnumA): EnumA {
 }
 ```
 
-As you might know, the 'Enum' of TypeScript could be caused below.
+As you might know, TypeScript enums compile to the following.
 ```javascript
 "use strict";
 
@@ -94,13 +88,13 @@ var EnumA;
 })(EnumA || (EnumA = {}));
 ```
 
-A key type and a value type are on the same level as the type.
+Key and value types are at the same type level.
 
 You don't expect it, right?
 That's why it is here.
 
 ## How to use
-The case below is pretended in your TypeScript project.
+The case assumes you're working in a TypeScript project.
 ```typescript
 export const ObjectA = {
   KEY_A: 'valueA',
@@ -129,7 +123,7 @@ And below example is for the 'React' users with CSS-in-JS styling.
 import { ReactComponentElement, ReactElement } from 'react';
 
 // assign a component to const
-interface ConstantFunctionComponentProps extends PropsWithClassName, PropsWithChidren {
+interface ConstantFunctionComponentProps extends PropsWithClassName, PropsWithChildren {
   title: string;
 }
 
@@ -182,19 +176,19 @@ const specialArray: SpecialArrayType = [1, 'element-name', { keyName: 'some-key-
 const lastElement: ArrayElement<SpecialArrayType> = { keyName: '' };
 ```
 
-The package includes example `JS-Doc`.
+The package includes `JS-Doc` examples.
 
-This package will promise to you below.
+This package guarantees the following.
 
 1. This package will not pollute your dependencies.
 2. This package will not update with other dependencies.
 3. This package will not remove the made types until the next major version.
 
-So easy to use, huh?
+So ready to use, right?
 
 ## Appendix
 ### Q&A
 
 `Q` What is this garbage?
 
-`A` Oops! Go your way, please don't use it.
+`A` Oops! Don't mind it.
