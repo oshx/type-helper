@@ -1,4 +1,4 @@
-/** Expected to a type of key of an object. Cast `as const` object is usually supported autocomplete in some IDEs.
+/** Expects the type of keys. Cast `as const` object is usually supported autocomplete in some IDEs.
  *
  * @example
  * const ObjectA = {
@@ -8,10 +8,9 @@
  *
  * type ObjectKey<typeof ObjectA> = 'KEY_A'|'KEY_B';
  */
-
 declare type ObjectKey<T extends object = any> = keyof T
 
-/** Expected to a type of value of an object. Cast `as const` object is usually supported autocomplete in some IDEs.
+/** Expects the type of values. Cast `as const` object is usually supported autocomplete in some IDEs.
  *
  * @example
  * const ObjectA = {
@@ -45,6 +44,17 @@ declare type PropsWithClassName<
  * }
  */
 declare type AnyFunction = (...args: any[]) => any
+/**
+ * Array Element Type
+ * @reference https://stackoverflow.com/questions/41253310/typescript-retrieve-element-type-information-from-array-type
+ * @description It is inferred from an array type to its element type
+ * @example
+ * const someArray = [1, 'number', true, { key: 'value }] as const;
+ * type SomeArrayElement = ArrayElement<typeof someArray>;
+ * // SomeArrayElement will be `1 | "number" | true | { key: string }`
+ */
+declare type ArrayElement<ArrayType extends readonly unknown[]> =
+  ArrayType extends readonly (infer ElementType)[] ? ElementType : never;
 
 /** Image File Format GIF
  *
@@ -108,15 +118,3 @@ declare module '*.webp' {
 declare module '*.svg' {
   export default string
 }
-
-/**
- * Array Element Type
- * @reference https://stackoverflow.com/questions/41253310/typescript-retrieve-element-type-information-from-array-type
- * @description It is inferred from an array type to its element type
- * @example
- * const someArray = [1, 'number', true, { key: 'value }] as const;
- * type SomeArrayElement = ArrayElement<typeof someArray>;
- * // SomeArrayElement will be `1 | "number" | true | { key: string }`
- */
-type ArrayElement<ArrayType extends readonly unknown[]> =
-  ArrayType extends readonly (infer ElementType)[] ? ElementType : never;
