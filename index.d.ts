@@ -1,4 +1,3 @@
-declare global {
 /** Expects the type of keys. Cast `as const` object is usually supported autocomplete in some IDEs.
  *
  * @example
@@ -9,7 +8,7 @@ declare global {
  *
  * type ObjectKey<typeof ObjectA> = 'KEY_A'|'KEY_B';
  */
-type ObjectKey<T extends object = any> = keyof T
+export type ObjectKey<T extends object = any> = keyof T
 
 /** Expects the type of values. Cast `as const` object is usually supported autocomplete in some IDEs.
  *
@@ -21,7 +20,7 @@ type ObjectKey<T extends object = any> = keyof T
  *
  * type ObjectValue<typeof ObjectA> = 'valueA'|'valueB';
  */
-type ObjectValue<T extends object = any> = T[ObjectKey<T>]
+export type ObjectValue<T extends object = any> = T[ObjectKey<T>]
 
 /** The extendable interface-like-type for CSS-in-JS users.
  *
@@ -30,7 +29,7 @@ type ObjectValue<T extends object = any> = T[ObjectKey<T>]
  *   ...
  * }
  */
-type PropsWithClassName<
+export type PropsWithClassName<
   T extends object = object,
   ClassNameType = string
 > = {
@@ -44,7 +43,7 @@ type PropsWithClassName<
  *   return callback();
  * }
  */
-type AnyFunction = (...args: any[]) => any
+export type AnyFunction = (...args: any[]) => any
 /**
  * Array Element Type
  * @reference https://stackoverflow.com/questions/41253310/typescript-retrieve-element-type-information-from-array-type
@@ -54,9 +53,8 @@ type AnyFunction = (...args: any[]) => any
  * type SomeArrayElement = ArrayElement<typeof someArray>;
  * // SomeArrayElement will be `1 | "number" | true | { key: string }`
  */
-type ArrayElement<ArrayType extends readonly unknown[]> =
+export type ArrayElement<ArrayType extends readonly unknown[]> =
   ArrayType extends readonly (infer ElementType)[] ? ElementType : never;
-}
 
 /** Image File Format GIF
  *

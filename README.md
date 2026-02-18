@@ -25,6 +25,18 @@ However, if you're using an older version of TypeScript, you may need to configu
   }
 }
 ```
+### Yarn Berry
+For Yarn Berry users, add the package to your TypeScript configuration.
+
+`tsconfig.json`
+
+```json
+{
+  "compilerOptions": {
+    "types": ["@oshx/type-helper"]
+  }
+}
+```
 
 ## Ingredients
 
