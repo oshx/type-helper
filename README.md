@@ -34,7 +34,8 @@ For Yarn Berry users, add the package to your TypeScript configuration.
 {
   "compilerOptions": {
     "types": ["@oshx/type-helper"]
-  }
+  },
+  "includes": ["@oshx/type-helper"]
 }
 ```
 
