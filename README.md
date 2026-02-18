@@ -4,9 +4,12 @@
 This package includes the practical type helper for TypeScript users.
 
 ## Installation
+
 ```shell
 $ npm i -D @oshx/type-helper
 ```
+
+### Default > TypeScript 4.7+
 
 If you're using *TypeScript 4.7+*, no setup needed.
 
@@ -22,7 +25,7 @@ However, if you're using an older version of TypeScript, you may need to configu
 {
   "compilerOptions": {
     "typeRoots": [
-      "node_modules/@oshx/type-helper",
+      "node_modules/@oshx",
       "node_modules/@types"
     ]
   }
