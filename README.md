@@ -13,6 +13,9 @@ If you're using *TypeScript 4.7+*, no setup needed.
 ### Older version *< TypeScript 4.7*
 However, if you're using an older version of TypeScript, you may need to configure the following.
 
+> *Note: This section may not be fully tested and could be updated in future versions.*
+ 
+
 `tsconfig.json`
 
 ```json
